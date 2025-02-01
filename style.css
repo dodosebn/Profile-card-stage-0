@@ -1,25 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-h1{
+
+h1 {
     color: red;
 }
-body{
+
+body {
     overflow-x: hidden;
     color: hsl(233, 26%, 24%);
-    height:fit-content;
+    height: fit-content;
     font-size: 18px;
-    font-family:'Public Sans', sans-serif ;
+    font-family: 'Public Sans', sans-serif;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
-.pfile_imgBg{
+
+.pfile_imgBg {
     background-image: url('./imgs/bg-2.avif');
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,54 +32,84 @@ body{
     padding: 2rem;
     position: relative;
 }
-.pfile_imgCont{
+
+.pfile_imgCont {
     position: inherit;
     top: 5.6rem;
     text-align: center;
 }
-.pfile_imgCont > img{
+
+.pfile_imgCont > img {
     object-fit: cover;
     border: 3px solid #d3d3d3;
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
-    /* margin-top: 9rem; */
 }
-.section2{
+
+.section2 {
     padding: 1rem;
     text-align: center;
 }
-.Name_Title{
-line-height:2rem;
+
+.Name_Title, .locMail {
+    line-height: 2rem;
 }
-main{
+
+main {
     padding-top: 0.5rem;
 }
-main > p{
-line-height: 1.8rem;
-/* width: 20rem; */
+
+main > p {
+    line-height: 1.8rem;
 }
-main > ul > li{
+
+main > ul > li, .socials > div > li {
     list-style: none;
 }
-main > ul > li > a{
-text-decoration: none;
-color: hsl(233, 26%, 24%);
+
+main > ul > li > a, .socials > div > li > a {
+    text-decoration: none;
+    color: hsl(233, 26%, 24%);
 }
-.socials {
+
+.socials > div {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding-top: 1rem;
-    /* justify-content: space-around; */
-}
-.fa-brands{
-    font-size: 2rem;
-    /* width: 4rem;
-    height: 4rem; */
+    padding: 0.5rem;
 }
 
-@media (min-width: 1025px) {
+.socials > span {
+    padding-top: 0.4rem;
+    cursor: pointer;
+}
+
+.fa-brands {
+    font-size: 2rem;
+}
+
+.stubBornEmail {
+    text-decoration: none;
+    color: hsl(233, 26%, 24%);
+}
+
+#utc-time {
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .socials {
+        display: flex;
+        justify-content: center;
+    }
+    .socials > span {
+        padding-top: 0.75rem;
+        color: red;
+    }
+}
+
+@media (min-width: 875px) {
     body {
         overflow-x: hidden;
     }
@@ -92,10 +127,12 @@ color: hsl(233, 26%, 24%);
         justify-content: center;
         align-items: center;
     }
+    .pfile_imgCont {
+        top: 0rem;
+    }
     .pfile_imgCont > img {
-        width: 20rem;
-        height: 20rem;
-        border-radius: 50%;
+        width: 23rem;
+        height: 23rem;
     }
     .section2 {
         align-items: flex-start;
@@ -103,11 +140,13 @@ color: hsl(233, 26%, 24%);
         flex: 1;
     }
     .locMail {
-        flex-direction: row;
         align-items: flex-start;
         padding-top: 1rem;
     }
     .socials {
-        justify-content: flex-start;
+        position: relative;
+        justify-content: flex-start !important;
+        display: flex;
+        align-self: flex-start;
     }
 }

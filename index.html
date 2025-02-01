@@ -1,4 +1,3 @@
-<!-- https://www.figma.com/design/xFZfAgnlqNt1XWRg764kHj/profile-card-(Community)?node-id=0-1&t=PBbs0fDRY6G15k5e-1 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,35 +6,41 @@
     <title>Profile card | stage 0</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imgs/Dominion 1.jfif" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <section class="pfile_imgBg">
             <div class="pfile_imgCont">
-                <img src="./imgs/ebn1 (2).jpg" alt="pfile">
+                <img src="./imgs/ebn1 (2).jpg" alt="pfile"
+                data-testid="profilePicture">
             </div>
         </section>
 
         <section class="section2">
             <div class="Name_Title">
-            <h1>Orji Dominion</h1>
-            <h3>FrontEnd Developer</h3>
+            <h1 data-testid="fullName">Orji Dominion</h1>
+            <h3 data-testid="jobTitle">FrontEnd Developer</h3>
         </div>
         <main>
-            <p>I'm a front-end developer who loves making websites look good and work well. Through the HNG Internship, I'm learning more about TypeScript, React and other frontend stacks while getting real experience. I enjoy writing clean code, fixing problems, and learning new things to improve my skills in front-end development and modern web technologies.</p>
+            <p data-testid="shortBio">I'm a front-end developer who loves making websites look good and work well. Through the HNG Internship, I'm learning more about TypeScript, React and other frontend stacks while getting real experience. I enjoy writing clean code, fixing problems, and learning new things to improve my skills in front-end development and modern web technologies.</p>
 <ul class="locMail">
-    <li><span><i class="fa-solid fa-location-dot"></i></span>Abakaliki, Nigeria</li>
-    <li><span><i class="fa-solid fa-envelope"></i><a href="mailto:orjidominion32@gmail.com">orjidominion32@gmail.com</a></li>
+    <li data-testid="currentLocation"><span><i class="fa-solid fa-location-dot"></i></span>Abakaliki, Nigeria</li>
+    <li data-testid="emailAddress"><span><i class="fa-solid fa-envelope"></i><a href="mailto:orjidominion32@gmail.com" class="stubBornEmail" >orjidominion32@gmail.com</a></li>
 </ul>
 <ul class="socials">
+    <span class="socInfo">Contact me: </span>
+    <div class="socMeds" data-testid="socialLinks">
     <li><a href="https://x.com/Learning_Dodos"><i class="fa-brands fa-square-x-twitter"></i></a></li>
     <li><a href="https://github.com/dodosebn"><i class="fa-brands fa-github"></i></a></li>
     <li><a href="https://www.linkedin.com/in/orji-dominion-ebubennia-2260542ba/"><i class="fa-brands fa-linkedin"></i></a></li>
+</div>
 </ul>
-<p>UTC Time: </p>
         </main>
+        <p data-testid="currentTimeUTC" id="utc-time">Loding UTC time...</p>
         </section>
 
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
